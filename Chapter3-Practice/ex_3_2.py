@@ -1,4 +1,4 @@
-names = ['Jobs','Mia','Ava','zoe']
+names = ['Jobs', 'Mia', 'Ava', 'zoe']
 print('Hello!' + names[0] + '!')
 print('Hello!' + names[1] + '!')
 print('Hello!' + names[2] + '!')
