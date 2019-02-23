@@ -14,3 +14,22 @@
 
 ### 2019-2-23
 - [ ] 读完第三章完成习题
+- [ ] 完成如下练习
+```Python
+'''
+获取用户输入的字符串然后按如下形式输出。用list实现。
++------------+
+|            |
+| User input |        
+|            |
++------------+
+'''
+
+提示：
+#获取用户输入的方式：
+userInput = input（"Please input some words: "）
+#获取字符串长度：
+length = len(userInput)
+#list可以相加和相乘
+myList = ["+"] + length * ["-"] + ["+"]
+```
