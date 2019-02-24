@@ -31,7 +31,7 @@ userInput = input（"Please input some words: "）
 #获取字符串长度：
 length = len(userInput)
 #list可以相加和相乘
-myList = ["+"] + length * ["-"] + ["+"]
+Output = "+" + length * "-" + "+"
 ```
 
 ### 2019-2-24
