@@ -1,0 +1,16 @@
+names = ['Jobs', 'Mia', 'Ava', 'Zoe']
+print(names)
+print(names[1] + " " + "cannot make it.")#有一位嘉宾无法赴约
+names[1] = 'Martin'#替换
+print(names)
+print('Hello,' + names[0] + ',' + 'I would like invite you to have dinner,I found the bigger dining-table.')
+print('Hello,' + names[1] + ',' + 'I would like invite you to have dinner,I found the bigger dining-table.')
+print('Hello,' + names[2] + ',' + 'I would like invite you to have dinner,I found the bigger dining-table.')
+print('Hello,' + names[3] + ',' + 'I would like invite you to have dinner,I found the bigger dining-table.')
+names.insert(0,'Jack')#在开头添加名字
+print(names)
+names.insert(2,'Tom')#在中间添加名字
+print(names)
+names.append('Rose')#在末尾添加名字
+print(names)
+
