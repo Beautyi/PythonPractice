@@ -19,3 +19,13 @@ print(second)
 print(usr_input)
 print(second)
 print(first)
+
+'''
+Please input some words:
+bigbigbig
++---------+
+|         |
+|bigbigbig|
+|         |
++---------+
+'''
