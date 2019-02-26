@@ -4,3 +4,4 @@ for food in foods:
 foods = ('a', 'b', 'c', 'x', 'y')
 for food in foods:
     print(food)#修改两个菜
+
