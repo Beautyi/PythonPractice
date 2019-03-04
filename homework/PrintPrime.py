@@ -1,6 +1,4 @@
 prime_list = []
-number = 0
-isPrime = True
 
 for number in range(2, 100):
     isPrime = True
@@ -10,7 +8,7 @@ for number in range(2, 100):
             isPrime = False
             break
 
-    if isPrime == True:
+    if isPrime:
         prime_list.append(number)
 
 print(prime_list) 
