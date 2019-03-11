@@ -24,3 +24,32 @@
 # beijing
 #
 # '''
+
+dic = {}
+name = input("please tell me your name")
+tel_number = input("please tell me your tel_number")
+address = input("please tell me your address")
+dic["name"] = name
+dic["tel_number"] = tel_number
+dic["address"] = address
+print(dic)
+
+message = input("Please tell me what do you want to delete?")
+del dic[str(message)]
+print(dic)
+
+message_02 = input("Please tell me what do you want to replace?")
+message_03 = input("What do you want to replace it with?")
+dic[str(message_02)] = message_03
+print(dic)
+
+while True:
+    message_04 = input("Please tell me what do you want to find?And input 'quit' to end the program.")
+    if str(message_04) == 'quit':
+        break
+    elif str(message_04) == 'name':
+        print(dic['name'])
+    elif str(message_04) == 'tel_number':
+        print(dic['tel_number'])
+    else:
+        print(dic['address'])
