@@ -2,19 +2,42 @@ database = {}
 while True:
     cmd = input("Please input command:\n")
     
-    if cmd == "add" or cmd == "update":
+    if cmd == "add":
         name = input("Please input name:\n")
-        address = input("Please input address:\n")
-        phone_number = input("Please input phone_number:\n")
-        database[name] = {"address":address, "phone_number":phone_number}
+        if name not in database:
+            address = input("Please input address:\n")
+            phone_number = input("Please input phone_number:\n")
+            database[name] = {"address":address, "phone_number":phone_number}
+        else:
+            print("{} has already in database!".format(name))
+
+    elif cmd == "update":
+        name = input("Please input name:\n")
+        if name in database:
+            address = input("Please input address:\n")
+            phone_number = input("Please input phone_number:\n")
+            database[name] = {"address":address, "phone_number":phone_number}
+        else:
+            print("{} is not in database!".format(name))
 
     elif cmd == "delete":
         name = input("Please input name:\n")
-        del database[name]    
+        if name in database:
+            del database[name]
+        else:
+            print(name + " is not in database!")   
  
     elif cmd == "query":
         name = input("Please input name:\n")
-        print(database[name])
+        if name in database:
+            print(database[name])
+        else:
+            print(name + " is not in database!")   
+
+    elif cmd == "query all":
+        print("{} people in the database!".format(len(database)))
+        for key, value in database.items():
+            print("name: {}, address : {}, phone_number : {}".format(key, value['address'], value['phone_number']))
 
     elif cmd == "quit":
         break
@@ -22,50 +45,3 @@ while True:
     else:
         print("Unknown command")
         
-        
-'''
-Please input command:
-ddd
-Unknown command
-Please input command:
-add
-Please input name:
-tony
-Please input address:
-beijing
-Please input phone_number:
-123456
-Please input command:
-add
-Please input name:
-jack
-Please input address:
-shanghai
-Please input phone_number:
-987654
-Please input command:
-query
-Please input name:
-tony
-{'address': 'beijing', 'phone_number': '123456'}
-Please input command:
-delete
-Please input name:
-tony
-Please input command:
-update
-Please input name:
-jack
-Please input address:
-hangzhou
-Please input phone_number:
-5555
-Please input command:
-query
-Please input name:
-jack
-{'address': 'hangzhou', 'phone_number': '5555'}
-Please input command:
-quit
-
-'''
