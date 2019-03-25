@@ -1,5 +1,5 @@
 #城市
-def describe_city(city,nation='China'):
+def describe_city(city, nation='China'):
     """描述城市所属国家"""
     print(city.title() + " is in " + nation + ".")
 
